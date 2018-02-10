@@ -1,19 +1,23 @@
 
-<html lang="en">
+<html lang="en" >
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
     <link rel="stylesheet" href="styles/global.css">
     <script src="scripts/global.js"></script>
 
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular.min.js"></script>
+    <script src="scripts/Controller.js"></script>
+    <link rel="stylesheet" href="styles/bootstrap.min.css">
+
 </head>
-<body>
+<body ng-app="dashboard">
 
 <div id="header">
 <div class="logo">
     <ul>
         <li>
-            <img src="images/hm.png">
+            <img src="images/logo2_1.png">
             <a href="#">Dash<span>Logo</span></a>
 
 
@@ -26,9 +30,24 @@
         <img src="images/man.png">
     </div>
 </div>
+<div id="progress" >
+    <div class="first">1</div><div class="second">2</div><div class="third">3</div><div class="fourth">4</div><div></div>
+
+
+
+</div>
 <div id="container">
     <div class="sidepanel">
+<div class="user" style="height: 50px">
+<div class="image" style="float: left">
 
+    <img class="img-circle" src="http://35.163.140.136/resource/dist/img/user2-160x160.jpg" style="width: 60px;padding: 10px;">
+</div>
+    <div style="padding: 10px;font-size: medium;align-content: center;margin-left: 10px">
+        <span>Amit Kumar</span></br>
+        <span>Admin</span>
+    </div>
+</div>
 <ul id="nav">
     
     <li>
@@ -38,25 +57,25 @@
        <a href="#" onclick="change('preopen')"><img src="images/nav.png">&nbsp;&nbsp;&nbsp;&nbsp;Pre-Open Market</a>
     </li>
     <li>
-        <a href="#"><img src="images/nav.png">&nbsp;&nbsp;&nbsp;&nbsp;Equity Stock</a>
+        <a href="#" onclick="change('equity')"><img src="images/nav.png">&nbsp;&nbsp;&nbsp;&nbsp;Equity Stock</a>
     </li>
     <li>
-        <a href="#"><img src="images/nav.png">&nbsp;&nbsp;&nbsp;&nbsp;Equity Derivatives</a>
+        <a href="#" onclick="change('equityderivative')"><img src="images/nav.png">&nbsp;&nbsp;&nbsp;&nbsp;Equity Derivatives</a>
     </li>
     <li>
-        <a href="#"><img src="images/nav.png">&nbsp;&nbsp;&nbsp;&nbsp;Currency Derivatives</a>
+        <a href="#" onclick="change('currencyderivative')"><img src="images/nav.png">&nbsp;&nbsp;&nbsp;&nbsp;Currency Derivatives</a>
     </li><li>
-        <a href="#"><img src="images/nav.png">&nbsp;&nbsp;&nbsp;&nbsp;NSE Bond Future</a>
+        <a href="#" onclick="change('nsebond')"><img src="images/nav.png">&nbsp;&nbsp;&nbsp;&nbsp;NSE Bond Future</a>
     </li><li>
-        <a href="#"><img src="images/nav.png">&nbsp;&nbsp;&nbsp;&nbsp;Index</a>
+        <a href="#" onclick="change('indexbond')"><img src="images/nav.png">&nbsp;&nbsp;&nbsp;&nbsp;Index</a>
     </li><li>
-        <a href="#"><img src="images/nav.png">&nbsp;&nbsp;&nbsp;&nbsp;Stock in Call Auction</a>
+        <a href="#" onclick="change('stockauction')"><img src="images/nav.png">&nbsp;&nbsp;&nbsp;&nbsp;Stock in Call Auction</a>
     </li>
 </ul>
 
     </div>
-    <div id="content" class="content">
-       content pane
+<div id="content" class="content" ng-controller="viewcontrol">
+       {{tohello.title}}
     </div>
 </div>
 </body>
